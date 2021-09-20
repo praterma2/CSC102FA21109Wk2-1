@@ -8,6 +8,11 @@
     <script>
         alert("This is a test of the alert function.");
     </script>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,7 +25,34 @@
         This is a test of the paragraph tags.
     </p> <br>
     <button>Start</button>
-    <button>Stop</button>
+    <button>Stop</button> <br>
+    <br>
+    <p id="countDownTimer">Waiting to start...</p>
+    
+    <script>
+        var currTime = 10;
+        document.getElementById("countDownTimer").innerHTML = currTime;
+        setTimeout(function () {
+            currTime = currTime - 2;
+            document.getElementById("countDownTimer").innerHTML = currTime;
+        }, 5000);
+        setTimeout(function () {
+            currTime = currTime - 2;
+            document.getElementById("countDownTimer").innerHTML = currTime;
+        }, 4000);
+        setTimeout(function () {
+            currTime = currTime - 2;
+            document.getElementById("countDownTimer").innerHTML = currTime;
+        }, 6000);
+        setTimeout(function () {
+            currTime = currTime - 2;
+            document.getElementById("countDownTimer").innerHTML = currTime;
+        }, 8000);
+        setTimeout(function () {
+            currTime = currTime - 2;
+            document.getElementById("countDownTimer").innerHTML = "Blastoff!";
+        }, 10000);
+    </script>
 </body>
 
 </html>
